@@ -244,6 +244,9 @@ class Player {
         if (this.collision[2] === "#f00") {
             engine.level = 1
             this.reset()
+            levelCount = engine.level
+            localStorage.setItem("level", levelCount)
+            levelCountOutput.innerHTML = `Level: ${levelCount}`
         }
         // finish level
         if (this.collision[2] === "#0f0") {

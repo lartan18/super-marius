@@ -242,6 +242,7 @@ class Player {
         } 
         // death
         if (this.collision[2] === "#f00") {
+            engine.level = 1
             this.reset()
         }
         // finish level
@@ -275,7 +276,7 @@ class Player {
             localStorage.setItem("deathCount", deathCount)
             localStorage.setItem("level", engine.level)
             levelCountOutput.innerHTML = `Level: ${engine.level}`
-            deathCountOutput.innerHTML = `Level: ${deathCount}`
+            deathCountOutput.innerHTML = `Deaths: ${deathCount}`
             gameFinished = false
             // engine.update()
             // player.update()

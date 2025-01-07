@@ -242,7 +242,7 @@ class Player {
         } 
         // death
         if (this.collision[2] === "#f00") {
-            engine.level = 1
+            // engine.level = 1
             this.reset()
             levelCount = engine.level
             localStorage.setItem("level", levelCount)
